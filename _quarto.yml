@@ -1,0 +1,35 @@
+project:
+  type: website
+
+format:
+  html:
+    theme: default
+    css: styles.css
+    linkcolor: "#e2007a"
+
+site:
+  title: "SMARTbiomed software development"
+  navbar:
+    background: "#004080"
+    text-color: "white"
+    left:
+      - text: "Developer Home"
+        href: index.qmd
+      - text: "SMARTbiomed Home"
+        href: "https://smartbiomed.dk"
+    right: 
+      - text: "Dev guide"
+        href: dev-guide.qmd
+      - text: "Review guide"
+        href: review-guide.qmd
+      - text: "Submit"
+        href: "#"
+      - text: "Conduct"
+        href: code-of-conduct.qmd
+  page-footer:
+      background: "#004080"
+      left:
+        - text: "Contact software coordinator"
+          href: "mailto:michael.sachs@sund.ku.dk"
+      right:
+        - text: ""

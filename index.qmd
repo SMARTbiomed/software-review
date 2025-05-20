@@ -1,0 +1,61 @@
+---
+title: "SMARTbiomed software development"
+---
+
+# Welcome
+
+Welcome to the developer website for The Pioneer Centre for Statistical and computational Methods for Advanced Research to Transform Biomedicine (SMARTbiomed). A key research output from SMARTbiomed will be software. This website will be the hub for researchers interested in software development who are part of SMARTbiomed. We have a guide for developers, and we also facilitate peer review of software packages. 
+
+## Mission {.hero}
+
+### Our goal is to foster a research culture that __values reusable and interoperable software.__
+
+We aim to achieve this by 
+
+- Making the right data, tools and best practices more discoverable
+- Creating social infrastructure through a welcoming and diverse community
+
+Our software peer review program brings together SMARTbiomed scientists to improve the quality, reliability, and maintainability of scientific software packages through an open, constructive, and through peer-review process. 
+
+## Get started
+
+::: {.grid}
+
+
+::: {.g-col-6}
+[Guide for developers](dev-guide.html){.linkcard}
+:::
+
+
+
+::: {.g-col-6}
+[Guide for reviewers](review-guide.html){.linkcard}
+:::
+
+
+
+::: {.g-col-6}
+[Submit a package for review](https://github.com/SMARTBiomed/software-review/issues/new){.linkcard}
+:::
+
+::: {.g-col-6}
+[Code of conduct](code-of-conduct.html){.linkcard}
+:::
+
+
+:::
+
+::: {.grid}
+::: {.g-col-6 .card}
+__Credits__
+
+Our framework and content is heavily influenced by and adapted from [rOpenSci](https://ropensci.org/software-review/)
+:::
+
+::: {.g-col-6 .card}
+__Contact__ 
+
+Feel free to reach out by email to: michael.sachs[at]sund.ku.dk
+:::
+
+:::

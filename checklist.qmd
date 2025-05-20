@@ -1,0 +1,66 @@
+### Information and metadata
+
+- [ ] Package title short and descriptive
+- [ ] Software category (e.g., which theme or themes does it fall under) and keywords provided
+- [ ] Source code publicly available on an appropriate repository
+- [ ] License clearly stated and included with the source code
+- [ ] Version controlled (preferably with git) and using semantic versioning starting from 0.1.0: 
+
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+MAJOR version when you make incompatible API changes
+MINOR version when you add functionality in a backward compatible manner
+PATCH version when you make backward compatible bug fixes
+
+- [ ] List of package maintainers (with email), authors and contributors, including authors of any code copied or included from other sources
+- [ ] Package dependencies clearly indicated, including what systems the software is confirmed to run on (e.g., linux, windows). 
+- [ ] Packages that require non standard build tools, dependencies that are not easily obtained, or have other specialized requirements should consider providing a dockerfile and including examples of how it is used. 
+- [ ] Link to bug tracker provided
+
+### Documentation
+
+- [ ] Readme
+- [ ] Short description of the goals/main purpose of the package avoiding the use of jargon
+- [ ] Installation instructions
+- [ ] Brief demonstration of the usage of the package
+- [ ] Description of how the package relates to other packages in the organization, and how it compares to packages with similar - [ ] goals
+- [ ] Links to further documentation and tutorials
+- [ ] Links to pre-built binaries (using r-universe for R packages for example)
+- [ ] Tutorials/vignettes
+- [ ] Extended and completely reproducible demonstration of usage with strongly motivated examples and interpretation of results in the scientific context (task oriented, i.e., how to do the analysis)
+- [ ] Illustration of theory/methodology and comparison to alternatives (enhances understanding of methodology)
+- [ ] Illustration/instructions about implementation and possible extensions/connections to other software packages within the organization (enhances understanding of software)
+- [ ] Function reference – for each function in the package
+- [ ] Description of what the function does
+- [ ] Function inputs description
+- [ ] Function output description
+- [ ] Examples
+- [ ] Changelog/news
+- [ ] What has changed since the previous version
+- [ ] Documentation website
+- [ ] E.g., using pkgdown or sphinx
+- [ ] Includes all of the above in an easily browsable setting
+
+### Testing
+
+- [ ] Unit tests
+- [ ] All functions should be tested to ensure functionality and input/output expectations are met
+- [ ] Validation tests
+- [ ] Statistical methods should use benchmark data or simulation studies to demonstrate validity of the method, e.g., type I error, bias, efficiency, whatever is relevant to the method. The code to make the simulated data, or the data itself should be provided with the code as an example for users so the code editor can run spot-checking.
+- [ ] Integration tests
+- [ ] If the package interacts with other software packages, tests should check that they function together as expected
+- [ ] Tests of graphical interfaces should be present where applicable
+- [ ] Tests should be automatically run during a build process
+
+### Code
+
+- [ ] Code is organized into separate source files in a sensible manner with descriptive names
+- [ ] Functions and arguments names work together to form a common, logical programming API that is easy to read and auto-complete
+- [ ] Consider an object_verb() naming scheme for functions or object.verb() for object oriented paradigms, where object refers to the data and verb the primary action. This can be extended to include multiple words separated by underscores in order to be as descriptive as necessary. This scheme helps make code readable and easy to auto-complete. 
+- [ ] For functions that manipulate an object/data and return an object/data of the same type, make the object/data the first argument of the function so as to enhance compatibility with pipe operators (base R’s |>, magrittr’s %>%) and with other packages
+- [ ] We recommend using the following style guides for [R](https://style.tidyverse.org/index.html) and [python](https://docs.python-guide.org/writing/style/). Other languages may also have “official” or highly regarded style guides. While the use of a particular style is not required, it is required to use the same style consistently throughout the package. 
+- [ ] Avoid function name conflicts with base packages or other popular ones 
+- [ ] Argument naming and order should be consistent across functions that use similar inputs.
+- [ ] Functions should return coherent data structures rather than making modifications to the global environment and/or output to the hard disk as side effects. Output to disk should be explicit and obvious to the user.    
+- [ ] Any obvious inefficiencies should be fixed (create separate lists for different languages)
+- [ ] Input validation/checking

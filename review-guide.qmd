@@ -1,0 +1,55 @@
+---
+title: "Reviewer Guide"
+toc: true
+toc-location: left-body
+---
+
+## Overview of review process
+
+1. Package author initiates a [github issue](https://github.com/SMARTBiomed/software-review/issues/new) under the software-review repository of the SMARTbiomed github organization
+2. The software coordinator does an initial review
+3. Once the package has passed initial review, they find two peer reviewers
+4. Peer reviewers return comments as github comments under the issue
+5. Author responds to comments and updates package, as needed
+6. Decision is made, and once accepted, package is posted on the SMARTbiomed website and publicized with a "peer-reviewed" badge
+7. Author is encouraged to draft a software manuscript for submission to an appropriate scientific journal e.g., Journal of Statistical Software, the R journal, Journal of Computational and Graphical Statistics, Bioinformatics.
+
+### What happens after review? 
+
+1. Software coordinator regularly reviews individual packages (every 4 months), and links packages that work together, checks for maintenance issues such as broken dependencies or unaddressed bug reports. Also can identify opportunities for packages to work together in a bigger pipeline and develop tutorials or teaching materials 
+2. Software coordinator reviews processes (annually) to identify areas for improvement or modification. Provides a report of progress made and lessons learned. 
+3. Develop workshops for collaborators to learn about the guidelines and specific issues to enhance package development
+
+
+
+## Instructions for package authors
+
+If you are the author of a software package that you would like to be reviewed, prepare the following things: 
+
+- [ ] A link to the package source code available in a public repository, e.g., Github. 
+- [ ] A cover letter indicating 
+    - What the package goals are
+    - What the other available packages with similar goals are
+    - Why this one is needed
+    - A clearly scientifically motivated example in a common, complex disease setting
+    - An indication of what theme/category it belongs to (causal inference, risk prediction, machine learning)
+- [ ] Suggestions for reviewers, check the [list of mentors](https://smartbiomed.dk/people/mentors)
+- [ ] A methods paper or manuscript, if one is available 
+
+Once those are ready, create a github issue following the [review template](https://github.com/SMARTBiomed/software-review/issues/new)
+
+Information about the status of your review and related comments will be associated with that github issue. Make sure your notification settings are such that you will recieve emails when the issue is updated. 
+
+
+## Instructions for reviewers
+
+You will be tagged and invited to comment on a github issue that contains information about the package to be reviewed. Follow the instructions and leave a comment on the github issue with your review. 
+
+The purpose of the code review is to learn from each other and improve the quality of our research software. This checklist is merely a guide you can use to check for the presence and quality of these items, and to identify deficiencies that can be improved. The list is not exhaustive, nor is it expected that every single item is checked. 
+
+Refer to this checklist during your review, and remember to be constructive and kind in your comments. 
+
+## Checklist
+
+{{< include checklist.qmd >}}
+

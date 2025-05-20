@@ -1,0 +1,152 @@
+---
+title: "Code of Conduct"
+toc: true
+toc-location: left-body
+---
+
+We are committed to providing a safe, inclusive, welcoming, and
+harassment-free experience for everyone.
+
+We try to cultivate a community with shared values, where people are
+comfortable exploring ideas, asking questions, and saying things like "I
+don't understand" or "Why". Assume competence in the people you interact
+with. There are no stupid questions.
+
+Be considerate in speech and actions, and actively seek to acknowledge
+and respect the boundaries of people who participate in our activities.
+
+Take care of each other. Alert Michael Sachs if you notice a dangerous situation,
+someone in distress, or a potential violation of this Code of Conduct,
+even if it seems inconsequential. If Michael is the subject of the Alert or
+has a conflict of interest, please inform Naomi Wray, the director of the centre.
+
+Expected Behavior {#expected-behavior .unnumbered}
+=================
+
+All participants are expected to behave in
+accordance with professional standards, with both this Code of Conduct
+as well as their respective employer's policies governing appropriate
+workplace behavior, and all applicable laws.
+
+We're committed to providing welcome environments where people behave
+according to professional standards. We expect everyone to contribute to
+a welcoming, civil, safe, and tolerant environment.
+
+Examples of encouraged behavior that contributes to a positive
+environment include:
+
+-   Using welcoming and inclusive language
+
+-   Being respectful of differing viewpoints and experiences
+
+-   Gracefully accepting constructive criticism
+
+-   Focusing on what is best for everyone in the group
+
+-   Showing empathy towards other participants
+
+Unacceptable Behavior {#unacceptable-behavior .unnumbered}
+=====================
+
+We do not tolerate harassment in any form. Adherence to our Code of
+Conduct requires refraining from demeaning, discriminatory, or harassing
+behavior and speech including, but not limited to:
+
+-   offensive comments related to gender, gender identity and
+    expression, age, sexual orientation, disability, physical
+    appearance, body size, race, ethnicity, religion (or lack thereof),
+    nationality, native language, or technology choices
+
+-   unwelcome comments regarding a person's lifestyle choices and
+    practices, including those related to food, health, parenting,
+    drugs, or career stage
+
+-   sustained or willful disruption of discussions, talks, or other
+    events, including online discussion.
+
+-   deliberate intimidation
+
+-   continued one-on-one communication after requests to cease
+
+-   unwanted photography or recording, including logging online activity
+    for harassment purposes
+
+-   pattern of inappropriate social contact, such as requesting/assuming
+    inappropriate levels of intimacy with others
+
+-   inappropriate physical contact without consent or after a request to
+    stop. In virtual settings, inappropriate simulated physical contact
+    used without consent, such as textual descriptions like "hug" or
+    "backrub" or emojis representing such contacts.
+
+-   stalking or following behavior, including in virtual settings, such
+    as persistent unwanted direct messages, sending unwanted pictures or
+    malware links, or logging online activity for harassment purposes.
+
+-   threats of violence or incitement of violence towards any
+    individual, including encouraging a person to commit suicide or to
+    engage in self-harm
+
+-   use of sexual or discriminatory imagery, comments, or jokes
+
+-   unwelcome sexual attention, which can include inappropriate
+    questions of a sexual nature, asking for sexual favors, or
+    repeatedly asking for dates or contact information.
+
+-   deliberate "outing" of any aspect of a person's identity without
+    their consent except as necessary to protect vulnerable people from
+    intentional abuse
+
+-   deliberate misgendering or use of "dead" or rejected names
+
+-   non-consensual publication of non-harassing private communication,
+    including screenshots of private discussion channels or direct
+    messages.
+
+Consequences of Code of Conduct Violations {#consequences-of-code-of-conduct-violations .unnumbered}
+==========================================
+
+Participants who are asked to stop any inappropriate behavior are
+expected to comply immediately. This applies to any events and
+platforms, either online or in-person. If a participant engages in
+behavior that violates this code of conduct, the leadership may warn the
+offender, ask them to leave the group or meeting, or engage higher-level
+leadership and/or law enforcement to investigate the Code of Conduct
+violation and impose appropriate sanctions.
+
+Potential responses include:
+
+-   ban from the meetings and virtual spaces in order to stop the
+    inappropriate behavior;
+
+-   a formal warning to stop the harassing behavior;
+
+-   expulsion from the group;
+
+-   cancellation or early termination of employment or other
+    contributions to the group.
+
+Reporting Guidelines {#reporting-guidelines .unnumbered}
+====================
+
+If you experience or witness unacceptable behavior, or have any other
+concerns, please submit a report to the software coordinator Michael Sachs as soon as possible either
+by email or by contacting him directly. If Michael has a conflict of
+interest with a report either directly or via a close personal
+relationship, an alternative point of contact is Naomi Wray, the director of the centre. In that case, Michael will be recused and will not have access to
+the content or process of the report followup.
+
+If you are planning to attend an upcoming event or join an online
+channel, and have concerns regarding another individual who may be
+present, please submit a report as described above. We will work with
+you to take precautions to ensure your comfort and safety. These
+precautions may include: providing an escort, preparing onsite event
+staff, and/or providing on-site contact cell phone numbers for immediate
+contact. In some cases, we may take action to prevent a harasser from
+participating in the event.
+
+Credits {#credits .unnumbered}
+=======
+
+This Code of Conduct has been influenced by and adapted from the
+rOpenSci Code of Conduct (<https://ropensci.org/code-of-conduct/>).

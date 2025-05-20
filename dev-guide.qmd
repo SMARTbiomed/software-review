@@ -1,0 +1,23 @@
+---
+title: "Development Guide"
+toc: true
+toc-location: left-body
+---
+
+## General development guides
+
+### R
+
+- [“R Packages” by Hadley Wickham and Jennifer Bryan](https://r-pkgs.org/)
+
+### Python
+
+- ["Python packages" by Tomas Beuzen and Tiffany Timbers](https://py-pkgs.org/)
+
+
+## Checklist 
+
+Package authors should strive to include everything on this checklist in their package in the way that is standardized and accepted for the major repositories for the software language, e.g., [CRAN](https://cran.r-project.org/web/packages/policies.html) for R packages or [PyPI](https://packaging.python.org/en/latest/) for python packages. 
+
+
+{{< include checklist.qmd >}}

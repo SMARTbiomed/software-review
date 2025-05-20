@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Reviewer Guide – SMARTbiomed software development</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-ab9c3b7d2c032cbe6f125d1fc4be32e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">SMARTbiomed software development</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Developer Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://smartbiomed.dk"> 
+<span class="menu-text">SMARTbiomed Home</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./dev-guide.html"> 
+<span class="menu-text">Dev guide</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./review-guide.html" aria-current="page"> 
+<span class="menu-text">Review guide</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#"> 
+<span class="menu-text">Submit</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./code-of-conduct.html"> 
+<span class="menu-text">Conduct</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview-of-review-process" id="toc-overview-of-review-process" class="nav-link active" data-scroll-target="#overview-of-review-process">Overview of review process</a>
+  <ul class="collapse">
+  <li><a href="#what-happens-after-review" id="toc-what-happens-after-review" class="nav-link" data-scroll-target="#what-happens-after-review">What happens after review?</a></li>
+  </ul></li>
+  <li><a href="#instructions-for-package-authors" id="toc-instructions-for-package-authors" class="nav-link" data-scroll-target="#instructions-for-package-authors">Instructions for package authors</a></li>
+  <li><a href="#instructions-for-reviewers" id="toc-instructions-for-reviewers" class="nav-link" data-scroll-target="#instructions-for-reviewers">Instructions for reviewers</a></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a>
+  <ul class="collapse">
+  <li><a href="#information-and-metadata" id="toc-information-and-metadata" class="nav-link" data-scroll-target="#information-and-metadata">Information and metadata</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
+  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Reviewer Guide</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+<nav id="TOC-body" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview-of-review-process" id="toc-overview-of-review-process">Overview of review process</a>
+  <ul>
+  <li><a href="#what-happens-after-review" id="toc-what-happens-after-review">What happens after review?</a></li>
+  </ul></li>
+  <li><a href="#instructions-for-package-authors" id="toc-instructions-for-package-authors">Instructions for package authors</a></li>
+  <li><a href="#instructions-for-reviewers" id="toc-instructions-for-reviewers">Instructions for reviewers</a></li>
+  <li><a href="#checklist" id="toc-checklist">Checklist</a>
+  <ul>
+  <li><a href="#information-and-metadata" id="toc-information-and-metadata">Information and metadata</a></li>
+  <li><a href="#documentation" id="toc-documentation">Documentation</a></li>
+  <li><a href="#testing" id="toc-testing">Testing</a></li>
+  <li><a href="#code" id="toc-code">Code</a></li>
+  </ul></li>
+  </ul>
+</nav>
+<section id="overview-of-review-process" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-review-process">Overview of review process</h2>
+<ol type="1">
+<li>Package author initiates a <a href="https://github.com/SMARTBiomed/software-review/issues/new">github issue</a> under the software-review repository of the SMARTbiomed github organization</li>
+<li>The software coordinator does an initial review</li>
+<li>Once the package has passed initial review, they find two peer reviewers</li>
+<li>Peer reviewers return comments as github comments under the issue</li>
+<li>Author responds to comments and updates package, as needed</li>
+<li>Decision is made, and once accepted, package is posted on the SMARTbiomed website and publicized with a “peer-reviewed” badge</li>
+<li>Author is encouraged to draft a software manuscript for submission to an appropriate scientific journal e.g., Journal of Statistical Software, the R journal, Journal of Computational and Graphical Statistics, Bioinformatics.</li>
+</ol>
+<section id="what-happens-after-review" class="level3">
+<h3 class="anchored" data-anchor-id="what-happens-after-review">What happens after review?</h3>
+<ol type="1">
+<li>Software coordinator regularly reviews individual packages (every 4 months), and links packages that work together, checks for maintenance issues such as broken dependencies or unaddressed bug reports. Also can identify opportunities for packages to work together in a bigger pipeline and develop tutorials or teaching materials</li>
+<li>Software coordinator reviews processes (annually) to identify areas for improvement or modification. Provides a report of progress made and lessons learned.</li>
+<li>Develop workshops for collaborators to learn about the guidelines and specific issues to enhance package development</li>
+</ol>
+</section>
+</section>
+<section id="instructions-for-package-authors" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-for-package-authors">Instructions for package authors</h2>
+<p>If you are the author of a software package that you would like to be reviewed, prepare the following things:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">A link to the package source code available in a public repository, e.g., Github.</label></li>
+<li><label><input type="checkbox">A cover letter indicating</label>
+<ul>
+<li>What the package goals are</li>
+<li>What the other available packages with similar goals are</li>
+<li>Why this one is needed</li>
+<li>A clearly scientifically motivated example in a common, complex disease setting</li>
+<li>An indication of what theme/category it belongs to (causal inference, risk prediction, machine learning)</li>
+</ul></li>
+<li><label><input type="checkbox">Suggestions for reviewers, check the <a href="https://smartbiomed.dk/people/mentors">list of mentors</a></label></li>
+<li><label><input type="checkbox">A methods paper or manuscript, if one is available</label></li>
+</ul>
+<p>Once those are ready, create a github issue following the <a href="https://github.com/SMARTBiomed/software-review/issues/new">review template</a></p>
+<p>Information about the status of your review and related comments will be associated with that github issue. Make sure your notification settings are such that you will recieve emails when the issue is updated.</p>
+</section>
+<section id="instructions-for-reviewers" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-for-reviewers">Instructions for reviewers</h2>
+<p>You will be tagged and invited to comment on a github issue that contains information about the package to be reviewed. Follow the instructions and leave a comment on the github issue with your review.</p>
+<p>The purpose of the code review is to learn from each other and improve the quality of our research software. This checklist is merely a guide you can use to check for the presence and quality of these items, and to identify deficiencies that can be improved. The list is not exhaustive, nor is it expected that every single item is checked.</p>
+<p>Refer to this checklist during your review, and remember to be constructive and kind in your comments.</p>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<section id="information-and-metadata" class="level3">
+<h3 class="anchored" data-anchor-id="information-and-metadata">Information and metadata</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Package title short and descriptive</label></li>
+<li><label><input type="checkbox">Software category (e.g., which theme or themes does it fall under) and keywords provided</label></li>
+<li><label><input type="checkbox">Source code publicly available on an appropriate repository</label></li>
+<li><label><input type="checkbox">License clearly stated and included with the source code</label></li>
+<li><label><input type="checkbox">Version controlled (preferably with git) and using semantic versioning starting from 0.1.0:</label></li>
+</ul>
+<p>Given a version number MAJOR.MINOR.PATCH, increment the:</p>
+<p>MAJOR version when you make incompatible API changes MINOR version when you add functionality in a backward compatible manner PATCH version when you make backward compatible bug fixes</p>
+<ul class="task-list">
+<li><label><input type="checkbox">List of package maintainers (with email), authors and contributors, including authors of any code copied or included from other sources</label></li>
+<li><label><input type="checkbox">Package dependencies clearly indicated, including what systems the software is confirmed to run on (e.g., linux, windows). - [ ] Packages that require non standard build tools, dependencies that are not easily obtained, or have other specialized requirements should consider providing a dockerfile and including examples of how it is used.</label></li>
+<li><label><input type="checkbox">Link to bug tracker provided</label></li>
+</ul>
+</section>
+<section id="documentation" class="level3">
+<h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Readme</label></li>
+<li><label><input type="checkbox">Short description of the goals/main purpose of the package avoiding the use of jargon</label></li>
+<li><label><input type="checkbox">Installation instructions</label></li>
+<li><label><input type="checkbox">Brief demonstration of the usage of the package</label></li>
+<li><label><input type="checkbox">Description of how the package relates to other packages in the organization, and how it compares to packages with similar - [ ] goals</label></li>
+<li><label><input type="checkbox">Links to further documentation and tutorials</label></li>
+<li><label><input type="checkbox">Links to pre-built binaries (using r-universe for R packages for example)</label></li>
+<li><label><input type="checkbox">Tutorials/vignettes</label></li>
+<li><label><input type="checkbox">Extended and completely reproducible demonstration of usage with strongly motivated examples and interpretation of results in the scientific context (task oriented, i.e., how to do the analysis)</label></li>
+<li><label><input type="checkbox">Illustration of theory/methodology and comparison to alternatives (enhances understanding of methodology)</label></li>
+<li><label><input type="checkbox">Illustration/instructions about implementation and possible extensions/connections to other software packages within the organization (enhances understanding of software)</label></li>
+<li><label><input type="checkbox">Function reference – for each function in the package</label></li>
+<li><label><input type="checkbox">Description of what the function does</label></li>
+<li><label><input type="checkbox">Function inputs description</label></li>
+<li><label><input type="checkbox">Function output description</label></li>
+<li><label><input type="checkbox">Examples</label></li>
+<li><label><input type="checkbox">Changelog/news</label></li>
+<li><label><input type="checkbox">What has changed since the previous version</label></li>
+<li><label><input type="checkbox">Documentation website</label></li>
+<li><label><input type="checkbox">E.g., using pkgdown or sphinx</label></li>
+<li><label><input type="checkbox">Includes all of the above in an easily browsable setting</label></li>
+</ul>
+</section>
+<section id="testing" class="level3">
+<h3 class="anchored" data-anchor-id="testing">Testing</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Unit tests</label></li>
+<li><label><input type="checkbox">All functions should be tested to ensure functionality and input/output expectations are met</label></li>
+<li><label><input type="checkbox">Validation tests</label></li>
+<li><label><input type="checkbox">Statistical methods should use benchmark data or simulation studies to demonstrate validity of the method, e.g., type I error, bias, efficiency, whatever is relevant to the method. The code to make the simulated data, or the data itself should be provided with the code as an example for users so the code editor can run spot-checking.</label></li>
+<li><label><input type="checkbox">Integration tests</label></li>
+<li><label><input type="checkbox">If the package interacts with other software packages, tests should check that they function together as expected</label></li>
+<li><label><input type="checkbox">Tests of graphical interfaces should be present where applicable</label></li>
+<li><label><input type="checkbox">Tests should be automatically run during a build process</label></li>
+</ul>
+</section>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Code is organized into separate source files in a sensible manner with descriptive names</label></li>
+<li><label><input type="checkbox">Functions and arguments names work together to form a common, logical programming API that is easy to read and auto-complete</label></li>
+<li><label><input type="checkbox">Consider an object_verb() naming scheme for functions or object.verb() for object oriented paradigms, where object refers to the data and verb the primary action. This can be extended to include multiple words separated by underscores in order to be as descriptive as necessary. This scheme helps make code readable and easy to auto-complete.</label></li>
+<li><label><input type="checkbox">For functions that manipulate an object/data and return an object/data of the same type, make the object/data the first argument of the function so as to enhance compatibility with pipe operators (base R’s |&gt;, magrittr’s %&gt;%) and with other packages</label></li>
+<li><label><input type="checkbox">We recommend using the following style guides for <a href="https://style.tidyverse.org/index.html">R</a> and <a href="https://docs.python-guide.org/writing/style/">python</a>. Other languages may also have “official” or highly regarded style guides. While the use of a particular style is not required, it is required to use the same style consistently throughout the package.</label></li>
+<li><label><input type="checkbox">Avoid function name conflicts with base packages or other popular ones</label></li>
+<li><label><input type="checkbox">Argument naming and order should be consistent across functions that use similar inputs.</label></li>
+<li><label><input type="checkbox">Functions should return coherent data structures rather than making modifications to the global environment and/or output to the hard disk as side effects. Output to disk should be explicit and obvious to the user.<br>
+</label></li>
+<li><label><input type="checkbox">Any obvious inefficiencies should be fixed (create separate lists for different languages)</label></li>
+<li><label><input type="checkbox">Input validation/checking</label></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="mailto:michael.sachs@sund.ku.dk">
+<p>Contact software coordinator</p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
