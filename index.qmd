@@ -15,7 +15,7 @@ We aim to achieve this by
 - Making the right data, tools and best practices more discoverable
 - Creating social infrastructure through a welcoming and diverse community
 
-Our software peer review program brings together SMARTbiomed scientists to improve the quality, reliability, and maintainability of scientific software packages through an open, constructive, and through peer-review process. 
+Our software peer review program brings together SMARTbiomed scientists to improve the quality, reliability, and maintainability of scientific software packages through an open, constructive, and thorough peer-review process. 
 
 ## Get started
 
