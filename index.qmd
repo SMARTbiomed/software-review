@@ -23,13 +23,13 @@ Our software peer review program brings together SMARTbiomed scientists to impro
 
 
 ::: {.g-col-6}
-[Guide for developers](dev-guide.html){.linkcard}
+[Resources for developers](dev-guide.html){.linkcard}
 :::
 
 
 
 ::: {.g-col-6}
-[Guide for reviewers](review-guide.html){.linkcard}
+[How the review process works](review-guide.html){.linkcard}
 :::
 
 

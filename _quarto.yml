@@ -19,11 +19,11 @@ site:
       - text: "SMARTbiomed Home"
         href: "https://smartbiomed.dk"
     right: 
-      - text: "Dev guide"
+      - text: "Dev resources"
         href: dev-guide.qmd
-      - text: "Review guide"
+      - text: "About review"
         href: review-guide.qmd
-      - text: "Submit"
+      - text: "Submit now"
         href: "https://github.com/SMARTBiomed/software-review/issues/new"
       - text: "Conduct"
         href: code-of-conduct.qmd

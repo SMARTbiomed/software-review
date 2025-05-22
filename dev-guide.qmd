@@ -1,5 +1,5 @@
 ---
-title: "Development Guide"
+title: "Resources for develops"
 toc: true
 toc-location: left-body
 ---
