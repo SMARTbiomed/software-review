@@ -70,8 +70,7 @@ body:
       description: Basic checks and other information
       options:
         - label: does not violate the Terms of Service of any service it interacts with.
-        - label: |
-          has an [OSI accepted license](https://opensource.org/licenses).
+        - label: "has an [OSI accepted license](https://opensource.org/licenses)."
         - label: contains a README with instructions for installing the development version.
         - label: includes documentation with examples for all user-facing functions.
         - label: Do you intend for this package to go on an official repository (e.g., CRAN, Bioconductor, PyPI)?
