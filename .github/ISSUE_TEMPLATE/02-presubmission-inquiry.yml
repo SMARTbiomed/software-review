@@ -1,0 +1,68 @@
+name: Submit a presubmission inquiry
+description: Use this template to get a quick response to see if your software is ready for review.
+title: "[Presubmission inquiry]: "
+assignees:
+  - sachsmc
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you haven't already, please read our [review guide](https://smartbiomed.github.io/software-review/review-guide.html)
+  - type: input
+    id: contact
+    attributes:
+      label: Submitting author name
+    validations:
+      required: true
+  - type: input
+    id: contactgithub
+    attributes:
+      label: Submitting author github username
+      placeholder: octocat
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Link to software repository
+    validations:
+      required: true
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Theme
+      description: Please indicate which theme this package falls under: (If you are unsure, we suggest you make a pre-submission inquiry.)
+      multiple: true
+      options:
+        - causal inference
+        - risk prediction
+        - machine learning
+  - type: textarea
+    id: desc
+    attributes: 
+      label: Description
+      description: In one paragraph or less, describe what the package does (this would be the description field for an R package) 
+  - type: textarea
+    id: compete
+    attributes: 
+      label: Competing packages
+      description: Are there other packages that accomplish the same thing? Are there related packages (especially within SMARTbiomed) that would work well together with this one? If so, please list them here. 
+  - type: textarea
+    id: target
+    attributes: 
+      label: Applications and motivation
+      description: Who is the target audience and what are scientific applications of this package? Can it be tied to a common, complex disease?
+  - type: textarea
+    id: other
+    attributes: 
+      label: Other information
+      description: Any other questions or issues we should be aware of?
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: I agree to abide by [the SMARTbiomed software review Code of Conduct](https://SMARTbiomed.github.io/software-review/code-of-conduct.html) during the review process and in maintaining my package should it be accepted.
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+

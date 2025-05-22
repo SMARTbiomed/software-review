@@ -1,0 +1,86 @@
+name: Submit software for review 
+description: Use this template to submit software for review.
+title: "[Submission]: "
+assignees:
+  - sachsmc
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you haven't already, please read our [review guide](https://smartbiomed.github.io/software-review/review-guide.html)
+  - type: input
+    id: contact
+    attributes:
+      label: Submitting author name
+    validations:
+      required: true
+  - type: input
+    id: contactgithub
+    attributes:
+      label: Submitting author github username
+      placeholder: octocat
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Link to software repository
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version being submitted
+    validations:
+      required: true
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Theme
+      description: Please indicate which theme this package falls under: (If you are unsure, we suggest you make a pre-submission inquiry.)
+      multiple: true
+      options:
+        - causal inference
+        - risk prediction
+        - machine learning
+  - type: textarea
+    id: desc
+    attributes: 
+      label: Description
+      description: In one paragraph or less, describe what the package does (this would be the description field for an R package) 
+  - type: textarea
+    id: compete
+    attributes: 
+      label: Competing packages
+      description: Are there other packages that accomplish the same thing? If so, what are they and how does yours differ?
+  - type: textarea
+    id: related
+    attributes: 
+      label: Related packages
+      description: Are there related packages (especially within SMARTbiomed) that would work well together with this one? If so, please list them here. 
+  - type: textarea
+    id: target
+    attributes: 
+      label: Applications and motivation
+      description: Who is the target audience and what are scientific applications of this package? If possible, relate it to an example in a common, complex disease setting. Include a citation if one is available.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Presubmission checks
+      description: Basic checks and other information
+      options:
+        - label: does not violate the Terms of Service of any service it interacts with.
+        - label: has an [OSI accepted license](https://opensource.org/licenses).
+        - label: contains a README with instructions for installing the development version.
+        - label: includes documentation with examples for all user-facing functions.
+        - label: Do you intend for this package to go on an official repository (e.g., CRAN, Bioconductor, PyPI)?
+        - label: Do you intend to publish a scientific article about the software (e.g., Journal of Statistical Software, Journal of Computational and Grapihcal Statistics)?
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: I agree to abide by [the SMARTbiomed software review Code of Conduct](https://SMARTbiomed.github.io/software-review/code-of-conduct.html) during the review process and in maintaining my package should it be accepted.
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+
