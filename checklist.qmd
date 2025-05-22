@@ -3,7 +3,7 @@
 - [ ] Package title short and descriptive
 - [ ] Software category (e.g., which theme or themes does it fall under) and keywords provided
 - [ ] Source code publicly available on an appropriate repository
-- [ ] License clearly stated and included with the source code
+- [ ] [OSI accepted license](https://opensource.org/licenses) clearly stated and included with the source code. 
 - [ ] Version controlled (preferably with git) and using semantic versioning starting from 0.1.0: 
 
 Given a version number MAJOR.MINOR.PATCH, increment the:
@@ -64,3 +64,23 @@ PATCH version when you make backward compatible bug fixes
 - [ ] Functions should return coherent data structures rather than making modifications to the global environment and/or output to the hard disk as side effects. Output to disk should be explicit and obvious to the user.    
 - [ ] Any obvious inefficiencies should be fixed (create separate lists for different languages)
 - [ ] Input validation/checking
+
+
+## Glossary
+
+### __API__ - application programming interface 
+
+This refers to the way that users and other software interact with your software package. It could be using a graphical interface, or using code. It generally refers to the manner of getting your package to do something, and how your package returns a result. 
+
+### __Version control__
+
+The practice of tracking and managing changes to software code. Version control systems are software tools that help software teams manage changes to source code over time. Examples of version control systems are git and svn. 
+
+### __Repository__
+
+A centralized, external storage location for software packages. Examples include github, CRAN, Bioconductor.
+
+
+### __License__
+
+A software license is a document that provides legal guidelines for the use and distribution of software. These is a list of open source licenses here: <https://opensource.org/licenses>.

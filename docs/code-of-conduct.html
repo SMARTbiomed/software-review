@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Reviewer Guide – SMARTbiomed software development</title>
+<title>Code of Conduct – SMARTbiomed software development</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -103,15 +103,15 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Dev guide</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./review-guide.html" aria-current="page"> 
+    <a class="nav-link" href="./review-guide.html"> 
 <span class="menu-text">Review guide</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./#"> 
+    <a class="nav-link" href="https://github.com/SMARTBiomed/software-review/issues/new"> 
 <span class="menu-text">Submit</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./code-of-conduct.html"> 
+    <a class="nav-link active" href="./code-of-conduct.html" aria-current="page"> 
 <span class="menu-text">Conduct</span></a>
   </li>  
 </ul>
@@ -129,19 +129,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview-of-review-process" id="toc-overview-of-review-process" class="nav-link active" data-scroll-target="#overview-of-review-process">Overview of review process</a>
-  <ul class="collapse">
-  <li><a href="#what-happens-after-review" id="toc-what-happens-after-review" class="nav-link" data-scroll-target="#what-happens-after-review">What happens after review?</a></li>
-  </ul></li>
-  <li><a href="#instructions-for-package-authors" id="toc-instructions-for-package-authors" class="nav-link" data-scroll-target="#instructions-for-package-authors">Instructions for package authors</a></li>
-  <li><a href="#instructions-for-reviewers" id="toc-instructions-for-reviewers" class="nav-link" data-scroll-target="#instructions-for-reviewers">Instructions for reviewers</a></li>
-  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a>
-  <ul class="collapse">
-  <li><a href="#information-and-metadata" id="toc-information-and-metadata" class="nav-link" data-scroll-target="#information-and-metadata">Information and metadata</a></li>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
-  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing</a></li>
-  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
-  </ul></li>
+  <li><a href="#expected-behavior" id="toc-expected-behavior" class="nav-link active" data-scroll-target="#expected-behavior">Expected Behavior</a></li>
+  <li><a href="#unacceptable-behavior" id="toc-unacceptable-behavior" class="nav-link" data-scroll-target="#unacceptable-behavior">Unacceptable Behavior</a></li>
+  <li><a href="#consequences-of-code-of-conduct-violations" id="toc-consequences-of-code-of-conduct-violations" class="nav-link" data-scroll-target="#consequences-of-code-of-conduct-violations">Consequences of Code of Conduct Violations</a></li>
+  <li><a href="#reporting-guidelines" id="toc-reporting-guidelines" class="nav-link" data-scroll-target="#reporting-guidelines">Reporting Guidelines</a></li>
+  <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits">Credits</a></li>
   </ul>
 </nav>
 </nav>
@@ -154,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reviewer Guide</h1>
+<h1 class="title">Code of Conduct</h1>
 </div>
 
 
@@ -174,142 +166,72 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview-of-review-process" id="toc-overview-of-review-process">Overview of review process</a>
-  <ul>
-  <li><a href="#what-happens-after-review" id="toc-what-happens-after-review">What happens after review?</a></li>
-  </ul></li>
-  <li><a href="#instructions-for-package-authors" id="toc-instructions-for-package-authors">Instructions for package authors</a></li>
-  <li><a href="#instructions-for-reviewers" id="toc-instructions-for-reviewers">Instructions for reviewers</a></li>
-  <li><a href="#checklist" id="toc-checklist">Checklist</a>
-  <ul>
-  <li><a href="#information-and-metadata" id="toc-information-and-metadata">Information and metadata</a></li>
-  <li><a href="#documentation" id="toc-documentation">Documentation</a></li>
-  <li><a href="#testing" id="toc-testing">Testing</a></li>
-  <li><a href="#code" id="toc-code">Code</a></li>
-  </ul></li>
+  <li><a href="#expected-behavior" id="toc-expected-behavior">Expected Behavior</a></li>
+  <li><a href="#unacceptable-behavior" id="toc-unacceptable-behavior">Unacceptable Behavior</a></li>
+  <li><a href="#consequences-of-code-of-conduct-violations" id="toc-consequences-of-code-of-conduct-violations">Consequences of Code of Conduct Violations</a></li>
+  <li><a href="#reporting-guidelines" id="toc-reporting-guidelines">Reporting Guidelines</a></li>
+  <li><a href="#credits" id="toc-credits">Credits</a></li>
   </ul>
 </nav>
-<section id="overview-of-review-process" class="level2">
-<h2 class="anchored" data-anchor-id="overview-of-review-process">Overview of review process</h2>
-<ol type="1">
-<li>Package author initiates a <a href="https://github.com/SMARTBiomed/software-review/issues/new">github issue</a> under the software-review repository of the SMARTbiomed github organization</li>
-<li>The software coordinator does an initial review</li>
-<li>Once the package has passed initial review, they find two peer reviewers</li>
-<li>Peer reviewers return comments as github comments under the issue</li>
-<li>Author responds to comments and updates package, as needed</li>
-<li>Decision is made, and once accepted, package is posted on the SMARTbiomed website and publicized with a “peer-reviewed” badge</li>
-<li>Author is encouraged to draft a software manuscript for submission to an appropriate scientific journal e.g., Journal of Statistical Software, the R journal, Journal of Computational and Graphical Statistics, Bioinformatics.</li>
-</ol>
-<section id="what-happens-after-review" class="level3">
-<h3 class="anchored" data-anchor-id="what-happens-after-review">What happens after review?</h3>
-<ol type="1">
-<li>Software coordinator regularly reviews individual packages (every 4 months), and links packages that work together, checks for maintenance issues such as broken dependencies or unaddressed bug reports. Also can identify opportunities for packages to work together in a bigger pipeline and develop tutorials or teaching materials</li>
-<li>Software coordinator reviews processes (annually) to identify areas for improvement or modification. Provides a report of progress made and lessons learned.</li>
-<li>Develop workshops for collaborators to learn about the guidelines and specific issues to enhance package development</li>
-</ol>
-</section>
-</section>
-<section id="instructions-for-package-authors" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-for-package-authors">Instructions for package authors</h2>
-<p>If you are the author of a software package that you would like to be reviewed, prepare the following things:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">A link to the package source code available in a public repository, e.g., Github.</label></li>
-<li><label><input type="checkbox">A cover letter indicating</label>
+<p>We are committed to providing a safe, inclusive, welcoming, and harassment-free experience for everyone.</p>
+<p>We try to cultivate a community with shared values, where people are comfortable exploring ideas, asking questions, and saying things like “I don’t understand” or “Why”. Assume competence in the people you interact with. There are no stupid questions.</p>
+<p>Be considerate in speech and actions, and actively seek to acknowledge and respect the boundaries of people who participate in our activities.</p>
+<p>Take care of each other. Alert Michael Sachs if you notice a dangerous situation, someone in distress, or a potential violation of this Code of Conduct, even if it seems inconsequential. If Michael is the subject of the Alert or has a conflict of interest, please inform Naomi Wray, the director of the centre.</p>
+<section id="expected-behavior" class="level1 unnumbered">
+<h1 class="unnumbered">Expected Behavior</h1>
+<p>All participants are expected to behave in accordance with professional standards, with both this Code of Conduct as well as their respective employer’s policies governing appropriate workplace behavior, and all applicable laws.</p>
+<p>We’re committed to providing welcome environments where people behave according to professional standards. We expect everyone to contribute to a welcoming, civil, safe, and tolerant environment.</p>
+<p>Examples of encouraged behavior that contributes to a positive environment include:</p>
 <ul>
-<li>What the package goals are</li>
-<li>What the other available packages with similar goals are</li>
-<li>Why this one is needed</li>
-<li>A clearly scientifically motivated example in a common, complex disease setting</li>
-<li>An indication of what theme/category it belongs to (causal inference, risk prediction, machine learning)</li>
-</ul></li>
-<li><label><input type="checkbox">Suggestions for reviewers, check the <a href="https://smartbiomed.dk/people/mentors">list of mentors</a></label></li>
-<li><label><input type="checkbox">A methods paper or manuscript, if one is available</label></li>
-</ul>
-<p>Once those are ready, create a github issue following the <a href="https://github.com/SMARTBiomed/software-review/issues/new">review template</a></p>
-<p>Information about the status of your review and related comments will be associated with that github issue. Make sure your notification settings are such that you will recieve emails when the issue is updated.</p>
-</section>
-<section id="instructions-for-reviewers" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-for-reviewers">Instructions for reviewers</h2>
-<p>You will be tagged and invited to comment on a github issue that contains information about the package to be reviewed. Follow the instructions and leave a comment on the github issue with your review.</p>
-<p>The purpose of the code review is to learn from each other and improve the quality of our research software. This checklist is merely a guide you can use to check for the presence and quality of these items, and to identify deficiencies that can be improved. The list is not exhaustive, nor is it expected that every single item is checked.</p>
-<p>Refer to this checklist during your review, and remember to be constructive and kind in your comments.</p>
-</section>
-<section id="checklist" class="level2">
-<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
-<section id="information-and-metadata" class="level3">
-<h3 class="anchored" data-anchor-id="information-and-metadata">Information and metadata</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Package title short and descriptive</label></li>
-<li><label><input type="checkbox">Software category (e.g., which theme or themes does it fall under) and keywords provided</label></li>
-<li><label><input type="checkbox">Source code publicly available on an appropriate repository</label></li>
-<li><label><input type="checkbox">License clearly stated and included with the source code</label></li>
-<li><label><input type="checkbox">Version controlled (preferably with git) and using semantic versioning starting from 0.1.0:</label></li>
-</ul>
-<p>Given a version number MAJOR.MINOR.PATCH, increment the:</p>
-<p>MAJOR version when you make incompatible API changes MINOR version when you add functionality in a backward compatible manner PATCH version when you make backward compatible bug fixes</p>
-<ul class="task-list">
-<li><label><input type="checkbox">List of package maintainers (with email), authors and contributors, including authors of any code copied or included from other sources</label></li>
-<li><label><input type="checkbox">Package dependencies clearly indicated, including what systems the software is confirmed to run on (e.g., linux, windows). - [ ] Packages that require non standard build tools, dependencies that are not easily obtained, or have other specialized requirements should consider providing a dockerfile and including examples of how it is used.</label></li>
-<li><label><input type="checkbox">Link to bug tracker provided</label></li>
+<li><p>Using welcoming and inclusive language</p></li>
+<li><p>Being respectful of differing viewpoints and experiences</p></li>
+<li><p>Gracefully accepting constructive criticism</p></li>
+<li><p>Focusing on what is best for everyone in the group</p></li>
+<li><p>Showing empathy towards other participants</p></li>
 </ul>
 </section>
-<section id="documentation" class="level3">
-<h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Readme</label></li>
-<li><label><input type="checkbox">Short description of the goals/main purpose of the package avoiding the use of jargon</label></li>
-<li><label><input type="checkbox">Installation instructions</label></li>
-<li><label><input type="checkbox">Brief demonstration of the usage of the package</label></li>
-<li><label><input type="checkbox">Description of how the package relates to other packages in the organization, and how it compares to packages with similar - [ ] goals</label></li>
-<li><label><input type="checkbox">Links to further documentation and tutorials</label></li>
-<li><label><input type="checkbox">Links to pre-built binaries (using r-universe for R packages for example)</label></li>
-<li><label><input type="checkbox">Tutorials/vignettes</label></li>
-<li><label><input type="checkbox">Extended and completely reproducible demonstration of usage with strongly motivated examples and interpretation of results in the scientific context (task oriented, i.e., how to do the analysis)</label></li>
-<li><label><input type="checkbox">Illustration of theory/methodology and comparison to alternatives (enhances understanding of methodology)</label></li>
-<li><label><input type="checkbox">Illustration/instructions about implementation and possible extensions/connections to other software packages within the organization (enhances understanding of software)</label></li>
-<li><label><input type="checkbox">Function reference – for each function in the package</label></li>
-<li><label><input type="checkbox">Description of what the function does</label></li>
-<li><label><input type="checkbox">Function inputs description</label></li>
-<li><label><input type="checkbox">Function output description</label></li>
-<li><label><input type="checkbox">Examples</label></li>
-<li><label><input type="checkbox">Changelog/news</label></li>
-<li><label><input type="checkbox">What has changed since the previous version</label></li>
-<li><label><input type="checkbox">Documentation website</label></li>
-<li><label><input type="checkbox">E.g., using pkgdown or sphinx</label></li>
-<li><label><input type="checkbox">Includes all of the above in an easily browsable setting</label></li>
+<section id="unacceptable-behavior" class="level1 unnumbered">
+<h1 class="unnumbered">Unacceptable Behavior</h1>
+<p>We do not tolerate harassment in any form. Adherence to our Code of Conduct requires refraining from demeaning, discriminatory, or harassing behavior and speech including, but not limited to:</p>
+<ul>
+<li><p>offensive comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), nationality, native language, or technology choices</p></li>
+<li><p>unwelcome comments regarding a person’s lifestyle choices and practices, including those related to food, health, parenting, drugs, or career stage</p></li>
+<li><p>sustained or willful disruption of discussions, talks, or other events, including online discussion.</p></li>
+<li><p>deliberate intimidation</p></li>
+<li><p>continued one-on-one communication after requests to cease</p></li>
+<li><p>unwanted photography or recording, including logging online activity for harassment purposes</p></li>
+<li><p>pattern of inappropriate social contact, such as requesting/assuming inappropriate levels of intimacy with others</p></li>
+<li><p>inappropriate physical contact without consent or after a request to stop. In virtual settings, inappropriate simulated physical contact used without consent, such as textual descriptions like “hug” or “backrub” or emojis representing such contacts.</p></li>
+<li><p>stalking or following behavior, including in virtual settings, such as persistent unwanted direct messages, sending unwanted pictures or malware links, or logging online activity for harassment purposes.</p></li>
+<li><p>threats of violence or incitement of violence towards any individual, including encouraging a person to commit suicide or to engage in self-harm</p></li>
+<li><p>use of sexual or discriminatory imagery, comments, or jokes</p></li>
+<li><p>unwelcome sexual attention, which can include inappropriate questions of a sexual nature, asking for sexual favors, or repeatedly asking for dates or contact information.</p></li>
+<li><p>deliberate “outing” of any aspect of a person’s identity without their consent except as necessary to protect vulnerable people from intentional abuse</p></li>
+<li><p>deliberate misgendering or use of “dead” or rejected names</p></li>
+<li><p>non-consensual publication of non-harassing private communication, including screenshots of private discussion channels or direct messages.</p></li>
 </ul>
 </section>
-<section id="testing" class="level3">
-<h3 class="anchored" data-anchor-id="testing">Testing</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Unit tests</label></li>
-<li><label><input type="checkbox">All functions should be tested to ensure functionality and input/output expectations are met</label></li>
-<li><label><input type="checkbox">Validation tests</label></li>
-<li><label><input type="checkbox">Statistical methods should use benchmark data or simulation studies to demonstrate validity of the method, e.g., type I error, bias, efficiency, whatever is relevant to the method. The code to make the simulated data, or the data itself should be provided with the code as an example for users so the code editor can run spot-checking.</label></li>
-<li><label><input type="checkbox">Integration tests</label></li>
-<li><label><input type="checkbox">If the package interacts with other software packages, tests should check that they function together as expected</label></li>
-<li><label><input type="checkbox">Tests of graphical interfaces should be present where applicable</label></li>
-<li><label><input type="checkbox">Tests should be automatically run during a build process</label></li>
+<section id="consequences-of-code-of-conduct-violations" class="level1 unnumbered">
+<h1 class="unnumbered">Consequences of Code of Conduct Violations</h1>
+<p>Participants who are asked to stop any inappropriate behavior are expected to comply immediately. This applies to any events and platforms, either online or in-person. If a participant engages in behavior that violates this code of conduct, the leadership may warn the offender, ask them to leave the group or meeting, or engage higher-level leadership and/or law enforcement to investigate the Code of Conduct violation and impose appropriate sanctions.</p>
+<p>Potential responses include:</p>
+<ul>
+<li><p>ban from the meetings and virtual spaces in order to stop the inappropriate behavior;</p></li>
+<li><p>a formal warning to stop the harassing behavior;</p></li>
+<li><p>expulsion from the group;</p></li>
+<li><p>cancellation or early termination of employment or other contributions to the group.</p></li>
 </ul>
 </section>
-<section id="code" class="level3">
-<h3 class="anchored" data-anchor-id="code">Code</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Code is organized into separate source files in a sensible manner with descriptive names</label></li>
-<li><label><input type="checkbox">Functions and arguments names work together to form a common, logical programming API that is easy to read and auto-complete</label></li>
-<li><label><input type="checkbox">Consider an object_verb() naming scheme for functions or object.verb() for object oriented paradigms, where object refers to the data and verb the primary action. This can be extended to include multiple words separated by underscores in order to be as descriptive as necessary. This scheme helps make code readable and easy to auto-complete.</label></li>
-<li><label><input type="checkbox">For functions that manipulate an object/data and return an object/data of the same type, make the object/data the first argument of the function so as to enhance compatibility with pipe operators (base R’s |&gt;, magrittr’s %&gt;%) and with other packages</label></li>
-<li><label><input type="checkbox">We recommend using the following style guides for <a href="https://style.tidyverse.org/index.html">R</a> and <a href="https://docs.python-guide.org/writing/style/">python</a>. Other languages may also have “official” or highly regarded style guides. While the use of a particular style is not required, it is required to use the same style consistently throughout the package.</label></li>
-<li><label><input type="checkbox">Avoid function name conflicts with base packages or other popular ones</label></li>
-<li><label><input type="checkbox">Argument naming and order should be consistent across functions that use similar inputs.</label></li>
-<li><label><input type="checkbox">Functions should return coherent data structures rather than making modifications to the global environment and/or output to the hard disk as side effects. Output to disk should be explicit and obvious to the user.<br>
-</label></li>
-<li><label><input type="checkbox">Any obvious inefficiencies should be fixed (create separate lists for different languages)</label></li>
-<li><label><input type="checkbox">Input validation/checking</label></li>
-</ul>
+<section id="reporting-guidelines" class="level1 unnumbered">
+<h1 class="unnumbered">Reporting Guidelines</h1>
+<p>If you experience or witness unacceptable behavior, or have any other concerns, please submit a report to the software coordinator Michael Sachs as soon as possible either by email or by contacting him directly. If Michael has a conflict of interest with a report either directly or via a close personal relationship, an alternative point of contact is Naomi Wray, the director of the centre. In that case, Michael will be recused and will not have access to the content or process of the report followup.</p>
+<p>If you are planning to attend an upcoming event or join an online channel, and have concerns regarding another individual who may be present, please submit a report as described above. We will work with you to take precautions to ensure your comfort and safety. These precautions may include: providing an escort, preparing onsite event staff, and/or providing on-site contact cell phone numbers for immediate contact. In some cases, we may take action to prevent a harasser from participating in the event.</p>
+</section>
+<section id="credits" class="level1 unnumbered">
+<h1 class="unnumbered">Credits</h1>
+<p>This Code of Conduct has been influenced by and adapted from the rOpenSci Code of Conduct (<a href="https://ropensci.org/code-of-conduct/" class="uri">https://ropensci.org/code-of-conduct/</a>).</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -36,14 +36,14 @@ If you are the author of a software package that you would like to be reviewed, 
 - [ ] Suggestions for reviewers, check the [list of mentors](https://smartbiomed.dk/people/mentors)
 - [ ] A methods paper or manuscript, if one is available 
 
-Once those are ready, create a github issue following the [review template](https://github.com/SMARTBiomed/software-review/issues/new)
+When you are ready, create a github issue following the [review template](https://github.com/SMARTBiomed/software-review/issues/new). If you are unsure, you can submit a pre-submission inquiry to get a fast response from the software coordinator. 
 
-Information about the status of your review and related comments will be associated with that github issue. Make sure your notification settings are such that you will recieve emails when the issue is updated. 
+Please read our [code of conduct](code-of-conduct.html). Information about the status of your review and related comments will be associated with that github issue. Make sure your notification settings are such that you will recieve emails when the issue is updated. 
 
 
 ## Instructions for reviewers
 
-You will be tagged and invited to comment on a github issue that contains information about the package to be reviewed. Follow the instructions and leave a comment on the github issue with your review. 
+You will be tagged and invited to comment on a github issue that contains information about the package to be reviewed. Follow the instructions and leave a comment on the github issue with your review. Please read our [code of conduct](code-of-conduct.html).
 
 The purpose of the code review is to learn from each other and improve the quality of our research software. This checklist is merely a guide you can use to check for the presence and quality of these items, and to identify deficiencies that can be improved. The list is not exhaustive, nor is it expected that every single item is checked. 
 

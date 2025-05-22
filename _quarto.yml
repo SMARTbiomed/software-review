@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 format:
   html:
@@ -23,7 +24,7 @@ site:
       - text: "Review guide"
         href: review-guide.qmd
       - text: "Submit"
-        href: "#"
+        href: "https://github.com/SMARTBiomed/software-review/issues/new"
       - text: "Conduct"
         href: code-of-conduct.qmd
   page-footer:
