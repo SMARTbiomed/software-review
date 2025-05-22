@@ -37,7 +37,7 @@ body:
     id: theme
     attributes:
       label: Theme
-      description: Please indicate which theme this package falls under: (If you are unsure, we suggest you make a pre-submission inquiry.)
+      description: Please indicate which theme this package falls under (If you are unsure, we suggest you make a pre-submission inquiry.)
       multiple: true
       options:
         - causal inference
@@ -70,7 +70,8 @@ body:
       description: Basic checks and other information
       options:
         - label: does not violate the Terms of Service of any service it interacts with.
-        - label: has an [OSI accepted license](https://opensource.org/licenses).
+        - label: |
+          has an [OSI accepted license](https://opensource.org/licenses).
         - label: contains a README with instructions for installing the development version.
         - label: includes documentation with examples for all user-facing functions.
         - label: Do you intend for this package to go on an official repository (e.g., CRAN, Bioconductor, PyPI)?
@@ -79,7 +80,8 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: I agree to abide by [the SMARTbiomed software review Code of Conduct](https://SMARTbiomed.github.io/software-review/code-of-conduct.html) during the review process and in maintaining my package should it be accepted.
+      description: |
+        I agree to abide by [the SMARTbiomed software review Code of Conduct](https://SMARTbiomed.github.io/software-review/code-of-conduct.html) during the review process and in maintaining my package should it be accepted.
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true

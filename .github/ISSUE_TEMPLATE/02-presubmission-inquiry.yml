@@ -31,7 +31,7 @@ body:
     id: theme
     attributes:
       label: Theme
-      description: Please indicate which theme this package falls under: (If you are unsure, we suggest you make a pre-submission inquiry.)
+      description: Please indicate which theme this package falls under (If you are unsure, we suggest you make a pre-submission inquiry.).
       multiple: true
       options:
         - causal inference
@@ -61,7 +61,8 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: I agree to abide by [the SMARTbiomed software review Code of Conduct](https://SMARTbiomed.github.io/software-review/code-of-conduct.html) during the review process and in maintaining my package should it be accepted.
+      description: |
+        I agree to abide by [the SMARTbiomed software review Code of Conduct](https://SMARTbiomed.github.io/software-review/code-of-conduct.html) during the review process and in maintaining my package should it be accepted.
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
