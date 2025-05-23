@@ -11,7 +11,7 @@ toc-location: left-body
 3. Once the package has passed initial review, they find two peer reviewers
 4. Peer reviewers return comments as github comments under the issue
 5. Author responds to comments and updates package, as needed
-6. Decision is made, and once accepted, package is posted on the SMARTbiomed website and publicized with a "peer-reviewed" badge
+6. Decision is made, and once accepted, package is posted on the SMARTbiomed website and publicized with a "peer-reviewed" badge that looks like this ![badge](data/smartbiomed-software.svg)
 7. Author is encouraged to draft a software manuscript for submission to an appropriate scientific journal e.g., Journal of Statistical Software, the R journal, Journal of Computational and Graphical Statistics, Bioinformatics.
 
 ### What happens after review? 
