@@ -10,6 +10,15 @@ body {
   color: white;
 }
 
+.nav-link {
+  color: #fa8cc9;
+  text-decoration: underline;
+}
+.nav-link:hover {
+  color: #bed8fe;
+}
+
+
 .hero {
   background-color: #6cbdcb;
   padding: 1.25rem;
