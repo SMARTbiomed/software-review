@@ -35,7 +35,7 @@ Our software peer review program brings together SMARTbiomed scientists to impro
 
 
 ::: {.g-col-6}
-[Submit a package for review](https://github.com/SMARTBiomed/software-review/issues/new){.linkcard}
+[Submit a package for review](https://github.com/SMARTbiomed/software-review/issues/new/choose){.linkcard}
 :::
 
 ::: {.g-col-6}

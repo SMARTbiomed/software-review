@@ -6,7 +6,7 @@ toc-location: left-body
 
 ## Overview of review process
 
-1. Package author initiates a [github issue](https://github.com/SMARTBiomed/software-review/issues/new) under the software-review repository of the SMARTbiomed github organization
+1. Package author initiates a [github issue](https://github.com/SMARTbiomed/software-review/issues/new/choose) under the software-review repository of the SMARTbiomed github organization
 2. The software coordinator does an initial review
 3. Once the package has passed initial review, they find two peer reviewers
 4. Peer reviewers return comments as github comments under the issue
@@ -33,10 +33,10 @@ If you are the author of a software package that you would like to be reviewed, 
     - Why this one is needed
     - A clearly scientifically motivated example in a common, complex disease setting
     - An indication of what theme/category it belongs to (causal inference, risk prediction, machine learning)
-- [ ] Suggestions for reviewers, check the [list of mentors](https://smartbiomed.dk/people/mentors)
+- [ ] Suggestions for reviewers, check the [list of mentors](https://smartbiomed.dk/people/)
 - [ ] A methods paper or manuscript, if one is available 
 
-When you are ready, create a github issue following the [review template](https://github.com/SMARTBiomed/software-review/issues/new). If you are unsure, you can submit a pre-submission inquiry to get a fast response from the software coordinator. 
+When you are ready, create a github issue following the [review template](https://github.com/SMARTbiomed/software-review/issues/new/choose). If you are unsure, you can submit a pre-submission inquiry to get a fast response from the software coordinator. 
 
 Please read our [code of conduct](code-of-conduct.html). Information about the status of your review and related comments will be associated with that github issue. Make sure your notification settings are such that you will recieve emails when the issue is updated. 
 
